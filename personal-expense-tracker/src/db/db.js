@@ -11,7 +11,7 @@ db.serialize(() => {
     // Create 'transactions' table if it doesn't exist
     db.run(`
         CREATE TABLE IF NOT EXISTS transactions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY ,
             type TEXT NOT NULL,
             category TEXT NOT NULL,
             amount REAL NOT NULL,
@@ -29,7 +29,7 @@ db.serialize(() => {
     // Create 'categories' table if it doesn't exist
     db.run(`
         CREATE TABLE IF NOT EXISTS categories (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY ,
             name TEXT NOT NULL,
             type TEXT NOT NULL
         )
